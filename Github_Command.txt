@@ -1,0 +1,29 @@
+//Setting Up A New Repository
+$git init
+$git add -A
+$git commit -m "First Commit"
+$git remote add origin https://github.com/DylanMarvin/GithubTest.git
+$git push origin master
+
+//Push Out Code Updates
+$git add -A
+$git commit -m "Your Despcription of Code Changes Here"
+$git push origin master
+
+//Pull In Code Updates
+$git pull origin master
+
+//Clone Repository
+$git clone https://github.com/DylanMarvin/Test.git
+
+//2 Changes With no Conflict
+1 Person Will Push Their Code
+Then The Other Will Do:
+$git stash
+$git pull origin master
+Next they will do:
+$git stash pop
+$git add -A
+$git commit -m "Your Despcription of Code Changes Here"
+$git push origin master
+Finally: The First Person Will Pull Again
