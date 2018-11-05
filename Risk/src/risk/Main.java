@@ -1,4 +1,4 @@
-//Test
+// Created by Liam Young, Austin Wood, Adam Oliva, and most importantly, David yates
 package risk;
 
 import javax.swing.*;
