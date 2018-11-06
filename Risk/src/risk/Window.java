@@ -1,17 +1,14 @@
 
 package risk;
 
-import java.awt.Dimension;
-import java.awt.Toolkit;
 
 public class Window {
-    static Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
     static final int XBORDER = 0;
     static final int YBORDER = 0;
     static final int YTITLE = 31;
     static final int WINDOW_BORDER = 8; 
-    static final int WINDOW_WIDTH = (int) screenSize.getWidth();
-    static final int WINDOW_HEIGHT = (int) screenSize.getHeight();    
+    static final int WINDOW_WIDTH = 800;
+    static final int WINDOW_HEIGHT = 800;    
 
     static int MIN_X;
     static int MAX_X;
