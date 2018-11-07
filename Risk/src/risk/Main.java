@@ -18,7 +18,8 @@ public class Main extends JFrame implements Runnable
     String host = new String();
     public static boolean isConnecting = false;
     public static boolean isClient;
-    Thread relaxer;
+    Thread relaxer; 
+    Image titlescreen = Toolkit.getDefaultToolkit().getImage("./titlescreen.png");;
 
 
     public static void main(String[] args)
@@ -251,7 +252,7 @@ public class Main extends JFrame implements Runnable
         g.setColor(Color.white);
         g.fillPolygon(x, y, 4);
         
-        
+        g.drawImage(titlescreen,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,this);
            
         
         if (!gameStarted)
