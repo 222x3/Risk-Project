@@ -18,6 +18,7 @@ public class Main extends JFrame implements Runnable
     String host = new String();
     public static boolean isConnecting = false;
     public static boolean isClient;
+    int i=0;
     Thread relaxer; 
     Image titlescreen = Toolkit.getDefaultToolkit().getImage("./titlescreen.png");;
 
@@ -62,7 +63,8 @@ public class Main extends JFrame implements Runnable
                 repaint();
             }
         });
-
+        
+       
         addMouseMotionListener(new MouseMotionAdapter()
         {
             public void mouseDragged(MouseEvent e)
@@ -76,7 +78,13 @@ public class Main extends JFrame implements Runnable
         {
             public void mouseMoved(MouseEvent e)
             {
-                System.out.println(e.getX() + "       " + e.getY());              
+                i++;
+                int x = e.getX();
+                int y= e.getY();    
+                if((x>280&x<483&&y>412&&y<487)|| (x>280&&x<483 && y>520 && y<595)||(x>280 && x<483 && y>620 && y<700)){
+                    System.out.println(i);
+                }
+                
                 repaint();
             }
         });
