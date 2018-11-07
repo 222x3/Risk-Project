@@ -41,7 +41,7 @@ public class Main extends JFrame implements Runnable
             {
                 if (e.BUTTON1 == e.getButton())
                 {
-                    //System.out.println(e.getX() + "       " + e.getY());
+                    
                 }
 
                 repaint();
@@ -67,8 +67,7 @@ public class Main extends JFrame implements Runnable
         {
             public void mouseDragged(MouseEvent e)
             {
-                int mouseX = e.getX();
-                int mouseY = e.getY();
+                
                 repaint();
             }
         });
@@ -77,8 +76,7 @@ public class Main extends JFrame implements Runnable
         {
             public void mouseMoved(MouseEvent e)
             {
-                int mouseX = e.getX();
-                int mouseY = e.getY();                
+                System.out.println(e.getX() + "       " + e.getY());              
                 repaint();
             }
         });
