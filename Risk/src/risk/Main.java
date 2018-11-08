@@ -19,9 +19,13 @@ public class Main extends JFrame implements Runnable
     public static boolean isConnecting = false;
     public static boolean isClient;
     boolean inTitleScreen=true;
-    int i=0;
     Thread relaxer;
-    Image titlescreen = Toolkit.getDefaultToolkit().getImage("./titlescreen.png");;
+    int fontSize=20;
+    boolean onFirstButton=false;
+    boolean onSecondButton=false;
+    boolean onThirdButton=false;
+    int mousePos []= new int[2];
+    Image titlescreen = Toolkit.getDefaultToolkit().getImage("./TitleScreenGothic.png");;
     sound bgSound = new sound("titlemusic.wav");
 
 
@@ -36,9 +40,9 @@ public class Main extends JFrame implements Runnable
         frame.setResizable(true);
     }    
     public void MouseMove(MouseEvent e){
-         i++;
                 int x = e.getX();
                 int y= e.getY();    
+                System.out.println(x + "   " + y);
                 if(/*first button*/(x>280&x<483&&y>412&&y<487)|| 
                    /*second button*/(x>280&&x<483 && y>520 && y<595)||
                    /*third button*/(x>280 && x<483 && y>620 && y<700)){
@@ -89,7 +93,8 @@ public class Main extends JFrame implements Runnable
         {
             public void mouseMoved(MouseEvent e)
             {
-                
+                mousePos[0]=e.getX();
+                mousePos[1]=e.getY();
                 repaint();
             }
         });
@@ -262,9 +267,19 @@ public class Main extends JFrame implements Runnable
         // background      
         g.setColor(Color.white);
         g.fillPolygon(x, y, 4);
+        if(inTitleScreen && (mousePos[0]>280&mousePos[0]<483&&mousePos[1]>412&&mousePos[1]<487)){
+            g.drawImage(titlescreen,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,this);
+            g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
+            g.setColor(Color.white);
+            g.drawString("Singleplayer", 320, 450);
+        }
+        else if(inTitleScreen){
+            g.drawImage(titlescreen,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,this);
+            g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
+            g.setColor(Color.red);
+            g.drawString("Singleplayer", 320, 450);
+        }
         
-        g.drawImage(titlescreen,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,this);
-           
         
         if (!gameStarted)
         {
@@ -377,6 +392,7 @@ public class Main extends JFrame implements Runnable
         }
         relaxer = null;
     }
+    
     
 
 
