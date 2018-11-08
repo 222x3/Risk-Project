@@ -18,9 +18,11 @@ public class Main extends JFrame implements Runnable
     String host = new String();
     public static boolean isConnecting = false;
     public static boolean isClient;
+    boolean inTitleScreen=true;
     int i=0;
     Thread relaxer; 
-    Image titlescreen = Toolkit.getDefaultToolkit().getImage("./titlescreen.png");;
+    Image titlescreen = Toolkit.getDefaultToolkit().getImage("./titlescreen.png");
+    sound bgSound = new sound("titlemusic.wav");
 
 
     public static void main(String[] args)
@@ -350,6 +352,9 @@ public class Main extends JFrame implements Runnable
 
             reset();
         }
+        if(inTitleScreen)
+            if (bgSound.donePlaying)       
+                bgSound = new sound("titlemusic.wav");
         
     }
 
