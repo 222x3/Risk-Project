@@ -33,7 +33,14 @@ public class Main extends JFrame implements Runnable
         frame.setTitle("Risk");
         frame.setResizable(true);
     }    
-    
+    public void MouseMove(MouseEvent e){
+         i++;
+                int x = e.getX();
+                int y= e.getY();    
+                if((x>280&x<483&&y>412&&y<487)|| (x>280&&x<483 && y>520 && y<595)||(x>280 && x<483 && y>620 && y<700)){
+                    System.out.println("HA GOTTTEM");
+        }
+    }
     public Main()
     {
         addMouseListener(new MouseAdapter()
@@ -42,7 +49,7 @@ public class Main extends JFrame implements Runnable
             {
                 if (e.BUTTON1 == e.getButton())
                 {
-                    
+                    MouseMove(e);
                 }
 
                 repaint();
