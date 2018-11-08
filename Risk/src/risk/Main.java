@@ -85,12 +85,6 @@ public class Main extends JFrame implements Runnable
         {
             public void mouseMoved(MouseEvent e)
             {
-                i++;
-                int x = e.getX();
-                int y= e.getY();    
-                if((x>280&x<483&&y>412&&y<487)|| (x>280&&x<483 && y>520 && y<595)||(x>280 && x<483 && y>620 && y<700)){
-                    System.out.println(i);
-                }
                 
                 repaint();
             }
