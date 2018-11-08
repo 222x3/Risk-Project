@@ -267,17 +267,29 @@ public class Main extends JFrame implements Runnable
         // background      
         g.setColor(Color.white);
         g.fillPolygon(x, y, 4);
-        if(inTitleScreen && (mousePos[0]>280&mousePos[0]<483&&mousePos[1]>412&&mousePos[1]<487)){
+        if(inTitleScreen){
             g.drawImage(titlescreen,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,this);
             g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
-            g.setColor(Color.white);
+            if((mousePos[0]>280&mousePos[0]<483&&mousePos[1]>412&&mousePos[1]<487))
+                g.setColor(Color.white);
+            else
+                g.setColor(Color.red);
             g.drawString("Singleplayer", 320, 450);
-        }
-        else if(inTitleScreen){
-            g.drawImage(titlescreen,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,this);
-            g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
-            g.setColor(Color.red);
-            g.drawString("Singleplayer", 320, 450);
+            
+            
+            if((mousePos[0]>280&mousePos[0]<483&&mousePos[1]>520&&mousePos[1]<595))
+                g.setColor(Color.white);
+            else
+                g.setColor(Color.red);
+            g.drawString("Multiplayer", 320, 560);
+            
+            
+            
+            if((mousePos[0]>280&mousePos[0]<483&&mousePos[1]>620&&mousePos[1]<700))
+                g.setColor(Color.white);
+            else
+                g.setColor(Color.red);
+            g.drawString("Exit", 360, 665);
         }
         
         
