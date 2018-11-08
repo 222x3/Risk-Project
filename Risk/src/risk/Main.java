@@ -21,6 +21,7 @@ public class Main extends JFrame implements Runnable
     boolean inTitleScreen=true;
     int i=0;
     Thread relaxer; 
+    //E
     Image titlescreen = Toolkit.getDefaultToolkit().getImage("./titlescreen.png");
     sound bgSound = new sound("titlemusic.wav");
 
