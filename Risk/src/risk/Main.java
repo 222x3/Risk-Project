@@ -19,7 +19,7 @@ public class Main extends JFrame implements Runnable
     public static boolean isConnecting = false;
     public static boolean isClient;
     int i=0;
-    Thread relaxer; 
+    Thread relaxer;
     Image titlescreen = Toolkit.getDefaultToolkit().getImage("./titlescreen.png");;
 
 
