@@ -20,15 +20,9 @@ public class Main extends JFrame implements Runnable
     public static boolean isClient;
     boolean inTitleScreen=true;
     int i=0;
-<<<<<<< HEAD
     Thread relaxer;
     Image titlescreen = Toolkit.getDefaultToolkit().getImage("./titlescreen.png");;
-=======
-    Thread relaxer; 
-    //E
-    Image titlescreen = Toolkit.getDefaultToolkit().getImage("./titlescreen.png");
     sound bgSound = new sound("titlemusic.wav");
->>>>>>> 07800f5a433b52c2f32d77f2dbce59e39aa3c566
 
 
     public static void main(String[] args)
