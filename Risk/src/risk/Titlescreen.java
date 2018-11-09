@@ -38,7 +38,6 @@ public class Titlescreen {
     
     static private void drawMain(int x, int y, Main m) {
         g.drawImage(menuImage,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,m);
-<<<<<<< HEAD
             g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
 
 
@@ -74,44 +73,6 @@ public class Titlescreen {
             }
             g.drawString("Exit", 360, 665);
 
-=======
-        g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));    
-        
-        
-<<<<<<< HEAD
-       
-        if((x>280&&x<483&&y>412&&y<487))
-=======
-        if((x>280&&x<483&&y>412&&y<487)) {
-            onFirstButton = true;
->>>>>>> 37ccda458f4062f73d5311c5731d417493e46ecb
-            g.setColor(Color.white);
-        } else {
-            onFirstButton = false;
-            g.setColor(Color.red);
-        }
-        g.drawString("Singleplayer", 320, 450);
-        
-        
-        
-        if((x>280&&x<483&&y>520&&y<595)) {
-            onSecondButton = true;
-            g.setColor(Color.white);
-        } else {
-            onSecondButton = false;
-            g.setColor(Color.red);
-        }
-        g.drawString("Multiplayer", 320, 560);
-        
-        
-        
-        if(x>280 && x<483 && y>620 && y<700) {
-            onThirdButton = true;
-            g.setColor(Color.white);
-        }
-        else {
-            onThirdButton = false;
->>>>>>> dea1c377bd559d3d2f253e4650194e5fc37d90eb
             g.setColor(Color.red);
     }
     
