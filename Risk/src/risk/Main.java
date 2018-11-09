@@ -18,15 +18,9 @@ public class Main extends JFrame implements Runnable
     String host = new String();
     public static boolean isConnecting = false;
     public static boolean isClient;
-    boolean inTitleScreen=true;
+    
     Thread relaxer;
-    int fontSize=20;
-    boolean onFirstButton=false;
-    boolean onSecondButton=false;
-    boolean onThirdButton=false;
     int mousePos []= new int[2];
-    Image titlescreen = Toolkit.getDefaultToolkit().getImage("./TitleScreenGothic.png");;
-    sound bgSound = new sound("titlemusic.wav");
 
 
     public static void main(String[] args)
@@ -39,26 +33,12 @@ public class Main extends JFrame implements Runnable
         frame.setTitle("Risk");
         frame.setResizable(true);
     }    
-    public void MouseMove(MouseEvent e){
-                int x = e.getX();
-                int y= e.getY();    
-                System.out.println(x + "   " + y);
-                if(/*first button*/(x>280&x<483&&y>412&&y<487)|| 
-                   /*second button*/(x>280&&x<483 && y>520 && y<595)||
-                   /*third button*/(x>280 && x<483 && y>620 && y<700)){
-                    System.out.println("HA GOTTTEM");
-        }
-    }
     public Main()
     {
         addMouseListener(new MouseAdapter()
         {
             public void mousePressed(MouseEvent e)
             {
-                if (e.BUTTON1 == e.getButton())
-                {
-                    MouseMove(e);
-                }
 
                 repaint();
 
@@ -267,27 +247,20 @@ public class Main extends JFrame implements Runnable
         // background      
         g.setColor(Color.white);
         g.fillPolygon(x, y, 4);
-        if(inTitleScreen && (mousePos[0]>280&mousePos[0]<483&&mousePos[1]>412&&mousePos[1]<487)){
-            g.drawImage(titlescreen,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,this);
-            g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
-            g.setColor(Color.white);
-            g.drawString("Singleplayer", 320, 450);
-        }
-        else if(inTitleScreen){
-            g.drawImage(titlescreen,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,this);
-            g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
-            g.setColor(Color.red);
-            g.drawString("Singleplayer", 320, 450);
+        
+        
+        if(Titlescreen.isActive()){
+            Titlescreen.drawMenu(mousePos, this);
         }
         
         
-        if (!gameStarted)
-        {
-            g.setFont(new Font("Comic Sans", Font.ROMAN_BASELINE, 20));
-            g.setColor(Color.black);
-            g.drawString("Not Connected",100,150);
-            
-        }
+//        if (!gameStarted)
+//        {
+//            g.setFont(new Font("Comic Sans", Font.ROMAN_BASELINE, 20));
+//            g.setColor(Color.black);
+//            g.drawString("Not Connected",100,150);
+//            
+//        }
         else if (isClient)
         {
             g.setFont(new Font("Comic Sans", Font.ROMAN_BASELINE, 20));
@@ -301,17 +274,17 @@ public class Main extends JFrame implements Runnable
             g.drawString("The Server",100,150);
         }
         
-            try
-            {
-                g.setFont(new Font("Comic Sans", Font.ROMAN_BASELINE, 20));
-                g.setColor(Color.black);
-                g.drawString("Your IP address: " + InetAddress.getLocalHost().getHostAddress(), Window.getX(10), Window.getY(20));
-                g.drawString("Enter IP address: " + host, Window.getX(10), Window.getY(60));
-            }
-            catch (UnknownHostException e)
-            {
-                e.printStackTrace();
-            }
+//            try
+//            {
+//                g.setFont(new Font("Comic Sans", Font.ROMAN_BASELINE, 20));
+//                g.setColor(Color.black);
+//                g.drawString("Your IP address: " + InetAddress.getLocalHost().getHostAddress(), Window.getX(10), Window.getY(20));
+//                g.drawString("Enter IP address: " + host, Window.getX(10), Window.getY(60));
+//            }
+//            catch (UnknownHostException e)
+//            {
+//                e.printStackTrace();
+//            }
             
         g.drawLine(Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getY(0));    
              
@@ -349,7 +322,7 @@ public class Main extends JFrame implements Runnable
 
 
     public static void reset() {
-            
+            Titlescreen.reset();
     }
 
 
@@ -367,10 +340,8 @@ public class Main extends JFrame implements Runnable
 
             reset();
         }
-        if(inTitleScreen)
-            if (bgSound.donePlaying)       
-                bgSound = new sound("titlemusic.wav");
-        
+        if(Titlescreen.isActive())
+            Titlescreen.checkMusicLoop();
     }
 
     // //////////////////////////////////////////////////////////////////////////
