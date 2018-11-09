@@ -38,7 +38,10 @@ public class Titlescreen {
     
     static private void drawMain(int x, int y, Main m) {
         g.drawImage(menuImage,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,m);
+            g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
+=======
 g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
+>>>>>>> 155f80d6a164feda70b884335d38ad8ed3780c2d
 
 
 
@@ -73,6 +76,8 @@ g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
             }
             g.drawString("Exit", 360, 665);
 
+<<<<<<< HEAD
+=======
 
         g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));    
         
@@ -110,6 +115,7 @@ g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
         else {
             onThirdButton = false;
 
+>>>>>>> 1d2eaedd31a80003436844ac06b5c4dbe3761a47
             g.setColor(Color.red);
     }
     

@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
+
 import java.net.*;
 import java.io.*;
 
@@ -49,7 +50,10 @@ public class Main extends JFrame implements Runnable
             {
                 if (e.BUTTON1 == e.getButton())
                 {
+<<<<<<< HEAD
+=======
                     System.exit(0);
+>>>>>>> 1d2eaedd31a80003436844ac06b5c4dbe3761a47
                     Titlescreen.pressedButton();
                 }
                 repaint();
@@ -282,7 +286,9 @@ public class Main extends JFrame implements Runnable
 //                e.printStackTrace();
 //            }
             
-        g.drawLine(Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getY(0));   
+        g.drawLine(Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getY(0));    
+             
+
         gOld.drawImage(image, 0, 0, null);
     }
 
