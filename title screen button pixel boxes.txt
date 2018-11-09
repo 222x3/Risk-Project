@@ -1,0 +1,11 @@
+Singleplayer:
+x:280-483
+y:412-487
+
+Multiplayer:
+x:280-483
+y:520-595
+
+Quit:
+x:280-483
+y:620-700

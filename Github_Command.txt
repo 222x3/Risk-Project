@@ -1,0 +1,28 @@
+//SETTING UP GITHUB ON NEW COMPUTER
+$git init
+$git add -A
+$git commit -m "First Commit"
+$git remote add origin https://github.com/xxx/xxx.git
+
+//Push Out Code Updates (Upload code)
+$git add -A
+$git commit -m "Your Despcription of Code Changes Here"
+$git push origin master
+
+//Pull In Code Updates (Download new code)
+$git pull origin master
+
+//Clone Repository (Don't worry about this)
+$git clone https://github.com/DylanMarvin/Test.git
+
+//2 Changes With no Conflict (We'll do this later)
+1 Person Will Push Their Code
+Then The Other Will Do:
+$git stash
+$git pull origin master
+Next they will do:
+$git stash pop
+$git add -A
+$git commit -m "Your Despcription of Code Changes Here"
+$git push origin master
+Finally: The First Person Will Pull Again
