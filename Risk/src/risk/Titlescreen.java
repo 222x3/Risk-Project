@@ -24,7 +24,7 @@ public class Titlescreen {
         onFirstButton=false;
         onSecondButton=false;
         onThirdButton=false;
-        menuImage=Toolkit.getDefaultToolkit().getImage("./Floating Embers.gif");
+        menuImage=Toolkit.getDefaultToolkit().getImage("./TitleScreenGothic.png");
         menuMusic=new sound("titlemusic.wav");
     }
     static void drawMenu(int mousePos [],Main m){
