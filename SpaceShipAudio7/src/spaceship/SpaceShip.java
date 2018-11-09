@@ -189,7 +189,7 @@ public class SpaceShip extends JFrame implements Runnable {
                 Window.xsize = getSize().width;
                 Window.ysize = getSize().height;
             }
-            outerSpaceImage = Toolkit.getDefaultToolkit().getImage("./FloatingEmbers.gif");
+            outerSpaceImage = Toolkit.getDefaultToolkit().getImage("./outerSpace.jpg");
 //            rocketImage = Toolkit.getDefaultToolkit().getImage("./rocket.GIF");
 //            rocketImage = Toolkit.getDefaultToolkit().getImage("./animRocket.GIF");
             reset();    
