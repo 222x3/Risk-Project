@@ -39,6 +39,14 @@ public class Main extends JFrame implements Runnable
         {
             public void mousePressed(MouseEvent e)
             {
+                e.getX();
+                e.getY();
+                if(e.getX()>760 && e.getX()<800 && e.getY()>760 && e.getY()<800 && Titlescreen.getMute()==false)
+                    Titlescreen.setMute(true);
+                else if(e.getX()>760 && e.getX()<800 && e.getY()>760 && e.getY()<800 && Titlescreen.getMute()==true)
+                    Titlescreen.setMute(false);
+                
+                
                 repaint();
             }
         });

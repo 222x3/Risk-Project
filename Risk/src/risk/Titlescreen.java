@@ -17,7 +17,10 @@ public class Titlescreen {
     static private boolean onThirdButton;
     static private Image menuImage;
     static private Image emberImage;
+    static private Image muteImage;
     static private sound menuMusic = null;
+    static private sound buttonSound = null;
+    static private boolean mute=false;
     
     static void reset(){
         mainActive=true;
@@ -27,7 +30,10 @@ public class Titlescreen {
         onThirdButton=false;
         menuImage=Toolkit.getDefaultToolkit().getImage("./TitleScreenGothic.png");
         emberImage=Toolkit.getDefaultToolkit().getImage("./Floating Embers.gif");
+        muteImage=Toolkit.getDefaultToolkit().getImage("./speakerIcon.png");
         menuMusic=new sound("titlemusic.wav");
+        mute=false;
+        
     }
     static void drawMenu(int mousePos [],Main m){
         //Array of mouse position seperated
@@ -45,20 +51,34 @@ public class Titlescreen {
     static private void drawMain(int x, int y, Main m) {
         //g.drawImage(emberImage,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,m);
         g.drawImage(menuImage,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,m);
+        g.drawImage(muteImage,760,760,20,20,m);
         g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
         
+        
+        if(mute)
+            menuMusic=null;
+        else if(menuMusic==null)
+            menuMusic=new sound("titlemusic.wav");
+        
         if((x>280&&x<483&&y>412&&y<487)) {
+            if(onFirstButton==false && !mute){
+                buttonSound=new sound("swordClashTitleScreen.wav");
+            }
             onFirstButton = true;
             g.setColor(Color.white);
+            
         } else {
             onFirstButton = false;
             g.setColor(Color.red);
         }
         g.drawString("Singleplayer", 320, 450);
 
-
+        
 
         if((x>280&&x<483&&y>520&&y<595)) {
+            if(onSecondButton==false && !mute){
+                buttonSound=new sound("swordClashTitleScreen.wav");
+            }
             onSecondButton = true;
             g.setColor(Color.white);
         } else {
@@ -70,6 +90,9 @@ public class Titlescreen {
 
 
         if(x>280 && x<483 && y>620 && y<700) {
+            if(onThirdButton==false && !mute){
+                buttonSound=new sound("swordClashTitleScreen.wav");
+            }
             onThirdButton = true;
             g.setColor(Color.white);
         } else {
@@ -77,7 +100,8 @@ public class Titlescreen {
             g.setColor(Color.red);
         }
         g.drawString("Exit", 360, 665);
-
+        
+        
         g.setColor(Color.red);
     }
     
@@ -107,11 +131,18 @@ public class Titlescreen {
     { System.exit(0); }
     
     static public void checkMusicLoop(){
-        if (menuMusic.donePlaying)       
+        if (!mute && menuMusic.donePlaying)       
             menuMusic = new sound("titlemusic.wav");
     }
     
     static public boolean isActive()
     { return mainActive; }
+    
+    static boolean getMute(){
+        return mute;
+    }
+    static void setMute(boolean m){
+        mute=m;
+    }
 }
 
