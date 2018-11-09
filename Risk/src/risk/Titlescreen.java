@@ -36,58 +36,63 @@ public class Titlescreen {
         //Drawing background and setting font
         if (mainActive)
         { drawMain(x, y, m); }
+        else if (singleActive)
+        { drawSingle(x, y, m); }
+        else if (multiActive)
+        { drawMulti(x, y, m); }
     }
     
     static private void drawMain(int x, int y, Main m) {
         //g.drawImage(emberImage,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,m);
         g.drawImage(menuImage,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,m);
-            g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
-
-
-
-            if((x>280&&x<483&&y>412&&y<487)) {
-                onFirstButton = true;
-                g.setColor(Color.white);
-            } else {
-                onFirstButton = false;
-                g.setColor(Color.red);
-            }
-            g.drawString("Singleplayer", 320, 450);
-
-
-
-            if((x>280&&x<483&&y>520&&y<595)) {
-                onSecondButton = true;
-                g.setColor(Color.white);
-            } else {
-                onSecondButton = false;
-                g.setColor(Color.red);
-            }
-            g.drawString("Multiplayer", 320, 560);
-
-
-
-            if(x>280 && x<483 && y>620 && y<700) {
-                onThirdButton = true;
-                g.setColor(Color.white);
-            } else {
-                onThirdButton = false;
-                g.setColor(Color.red);
-            }
-            g.drawString("Exit", 360, 665);
-
+        g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
+        
+        if((x>280&&x<483&&y>412&&y<487)) {
+            onFirstButton = true;
+            g.setColor(Color.white);
+        } else {
+            onFirstButton = false;
             g.setColor(Color.red);
+        }
+        g.drawString("Singleplayer", 320, 450);
+
+
+
+        if((x>280&&x<483&&y>520&&y<595)) {
+            onSecondButton = true;
+            g.setColor(Color.white);
+        } else {
+            onSecondButton = false;
+            g.setColor(Color.red);
+        }
+        g.drawString("Multiplayer", 320, 560);
+
+
+
+        if(x>280 && x<483 && y>620 && y<700) {
+            onThirdButton = true;
+            g.setColor(Color.white);
+        } else {
+            onThirdButton = false;
+            g.setColor(Color.red);
+        }
+        g.drawString("Exit", 360, 665);
+
+        g.setColor(Color.red);
     }
     
+    static private void drawSingle(int x, int y, Main m) {
+        g.drawImage(menuImage,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,m);
+    }
     
-    static boolean isActive(){
-        return mainActive;
+    static private void drawMulti(int x, int y, Main m) {
+        g.drawImage(menuImage,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,m);
     }
     
     static public void pressedButton() {
-        if (onFirstButton) { activateFirstButton(); }
-        else if (onSecondButton) { activateSecondButton(); }
-        else if (onThirdButton) { activateThirdButton(); }
+        if (onFirstButton) { onFirstButton = false; activateFirstButton(); }
+        else if (onSecondButton) { onSecondButton = false; activateSecondButton(); }
+        else if (onThirdButton) { onThirdButton = false; activateThirdButton(); }
     }
     
     static private void activateFirstButton() {
@@ -101,9 +106,12 @@ public class Titlescreen {
     static private void activateThirdButton()
     { System.exit(0); }
     
-    static void checkMusicLoop(){
+    static public void checkMusicLoop(){
         if (menuMusic.donePlaying)       
             menuMusic = new sound("titlemusic.wav");
     }
+    
+    static public boolean isActive()
+    { return mainActive; }
 }
 
