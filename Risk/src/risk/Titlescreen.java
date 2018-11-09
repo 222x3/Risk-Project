@@ -38,7 +38,6 @@ public class Titlescreen {
     
     static private void drawMain(int x, int y, Main m) {
         g.drawImage(menuImage,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,m);
-<<<<<<< HEAD
             g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
 
 
@@ -81,7 +80,7 @@ public class Titlescreen {
 <<<<<<< HEAD
        
         if((x>280&&x<483&&y>412&&y<487))
-=======
+
         if((x>280&&x<483&&y>412&&y<487)) {
             onFirstButton = true;
 >>>>>>> 37ccda458f4062f73d5311c5731d417493e46ecb

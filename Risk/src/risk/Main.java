@@ -49,11 +49,8 @@ public class Main extends JFrame implements Runnable
             {
                 if (e.BUTTON1 == e.getButton())
                 {
-<<<<<<< HEAD
                     System.exit(0);
-=======
                     Titlescreen.pressedButton();
->>>>>>> 37ccda458f4062f73d5311c5731d417493e46ecb
                 }
                 repaint();
             }
