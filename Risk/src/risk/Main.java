@@ -5,7 +5,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
-
 import java.net.*;
 import java.io.*;
 
@@ -39,7 +38,6 @@ public class Main extends JFrame implements Runnable
         {
             public void mousePressed(MouseEvent e)
             {
-
                 repaint();
 
             }
@@ -52,7 +50,7 @@ public class Main extends JFrame implements Runnable
             {
                 if (e.BUTTON1 == e.getButton())
                 {
-
+                    System.exit(0);
                 }
 
                 repaint();
@@ -286,9 +284,7 @@ public class Main extends JFrame implements Runnable
 //                e.printStackTrace();
 //            }
             
-        g.drawLine(Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getY(0));    
-             
-
+        g.drawLine(Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getY(0));   
         gOld.drawImage(image, 0, 0, null);
     }
 

@@ -34,7 +34,7 @@ public class Titlescreen {
         g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));    
         
         
-        
+       
         if((x>280&&x<483&&y>412&&y<487))
             g.setColor(Color.white);
         else
