@@ -15,10 +15,10 @@ public class ClientHandler
     private static         Socket MyClient;
     private static         BufferedReader br;
     private static         PrintWriter out;
-    
+
 	private static String hostIP = null;
 	private static int hostPort = -1;
-        
+
 //	private static Socket server = null;
 //	private static PrintWriter serverOut = null;
 //	private static BufferedReader serverIn = null;

@@ -17,7 +17,7 @@ public class Main extends JFrame implements Runnable
     String host = new String();
     public static boolean isConnecting = false;
     public static boolean isClient;
-    
+
     Thread relaxer;
     int mousePos []= new int[2];
 
@@ -39,7 +39,6 @@ public class Main extends JFrame implements Runnable
             public void mousePressed(MouseEvent e)
             {
                 repaint();
-
             }
         });
 
@@ -50,9 +49,12 @@ public class Main extends JFrame implements Runnable
             {
                 if (e.BUTTON1 == e.getButton())
                 {
+<<<<<<< HEAD
                     System.exit(0);
+=======
+                    Titlescreen.pressedButton();
+>>>>>>> 37ccda458f4062f73d5311c5731d417493e46ecb
                 }
-
                 repaint();
             }
         });
@@ -62,7 +64,6 @@ public class Main extends JFrame implements Runnable
         {
             public void mouseDragged(MouseEvent e)
             {
-                
                 repaint();
             }
         });
