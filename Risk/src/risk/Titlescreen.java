@@ -24,7 +24,7 @@ public class Titlescreen {
         onFirstButton=false;
         onSecondButton=false;
         onThirdButton=false;
-        menuImage=Toolkit.getDefaultToolkit().getImage("./TitleScreenGothic.png");
+        menuImage=Toolkit.getDefaultToolkit().getImage("./Floating Embers.gif");
         menuMusic=new sound("titlemusic.wav");
     }
     static void drawMenu(int mousePos [],Main m){
@@ -39,6 +39,9 @@ public class Titlescreen {
     static private void drawMain(int x, int y, Main m) {
         g.drawImage(menuImage,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,m);
             g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
+=======
+g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
+>>>>>>> 155f80d6a164feda70b884335d38ad8ed3780c2d
 
 
 
@@ -73,6 +76,46 @@ public class Titlescreen {
             }
             g.drawString("Exit", 360, 665);
 
+<<<<<<< HEAD
+=======
+
+        g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));    
+        
+        
+
+       
+        if((x>280&&x<483&&y>412&&y<487))
+
+        if((x>280&&x<483&&y>412&&y<487)) {
+            onFirstButton = true;
+            g.setColor(Color.white);
+        } else {
+            onFirstButton = false;
+            g.setColor(Color.red);
+        }
+        g.drawString("Singleplayer", 320, 450);
+        
+        
+        
+        if((x>280&&x<483&&y>520&&y<595)) {
+            onSecondButton = true;
+            g.setColor(Color.white);
+        } else {
+            onSecondButton = false;
+            g.setColor(Color.red);
+        }
+        g.drawString("Multiplayer", 320, 560);
+        
+        
+        
+        if(x>280 && x<483 && y>620 && y<700) {
+            onThirdButton = true;
+            g.setColor(Color.white);
+        }
+        else {
+            onThirdButton = false;
+
+>>>>>>> 1d2eaedd31a80003436844ac06b5c4dbe3761a47
             g.setColor(Color.red);
     }
     
