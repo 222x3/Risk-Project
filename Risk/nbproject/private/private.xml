@@ -3,14 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/157003148/Desktop/Risk/Risk-Project/Risk/src/risk/Main.java</file>
-            <file>file:/C:/Users/157003148/Desktop/Risk/Risk-Project/Risk/src/risk/Titlescreen.java</file>
-=======
-            <file>file:/C:/Users/384000875/Desktop/Risk-Project/Risk/src/risk/Main.java</file>
-            <file>file:/C:/Users/384000875/Desktop/Risk-Project/Risk/src/risk/ServerHandler.java</file>
-            <file>file:/C:/Users/384000875/Desktop/Risk-Project/Risk/src/risk/Titlescreen.java</file>
->>>>>>> bf4b7408690d28da2fbeb0eca1cb1b6472eb56e9
+            <file>file:/C:/Users/373001466/Desktop/Risk%20-%20CS2/Risk-Project/Risk/src/risk/ServerHandler.java</file>
+            <file>file:/C:/Users/373001466/Desktop/Risk%20-%20CS2/Risk-Project/Risk/src/risk/Titlescreen.java</file>
+            <file>file:/C:/Users/373001466/Desktop/Risk%20-%20CS2/Risk-Project/Risk/src/risk/Window.java</file>
+            <file>file:/C:/Users/373001466/Desktop/Risk%20-%20CS2/Risk-Project/Risk/src/risk/Main.java</file>
+            <file>file:/C:/Users/373001466/Desktop/Risk%20-%20CS2/Risk-Project/Risk/src/risk/ClientHandler.java</file>
         </group>
     </open-files>
 </project-private>

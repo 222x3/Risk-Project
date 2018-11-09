@@ -18,6 +18,7 @@ public class Titlescreen {
     static private Image menuImage;
     static private Image emberImage;
     static private sound menuMusic = null;
+    static int timeCount = 0;
     
     static void reset(){
         mainActive=true;
@@ -28,6 +29,7 @@ public class Titlescreen {
         menuImage=Toolkit.getDefaultToolkit().getImage("./TitleScreenGothic.png");
         emberImage=Toolkit.getDefaultToolkit().getImage("./Floating Embers.gif");
         menuMusic=new sound("titlemusic.wav");
+        timeCount=0;
     }
     static void drawMenu(int mousePos [],Main m){
         //Array of mouse position seperated
@@ -79,6 +81,8 @@ public class Titlescreen {
         g.drawString("Exit", 360, 665);
 
         g.setColor(Color.red);
+        timeCount++;
+        System.out.println(timeCount);
     }
     
     static private void drawSingle(int x, int y, Main m) {
