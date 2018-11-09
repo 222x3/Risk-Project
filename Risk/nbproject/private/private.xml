@@ -3,8 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/148003818/Desktop/Risk/Risk-Project/Risk/src/risk/Main.java</file>
             <file>file:/C:/Users/148003818/Desktop/Risk/Risk-Project/Risk/src/risk/Titlescreen.java</file>
+=======
+            <file>file:/C:/Users/157003148/Desktop/Risk/Risk-Project/Risk/src/risk/Main.java</file>
+            <file>file:/C:/Users/157003148/Desktop/Risk/Risk-Project/Risk/src/risk/sound.java</file>
+            <file>file:/C:/Users/157003148/Desktop/Risk/Risk-Project/Risk/src/risk/Titlescreen.java</file>
+>>>>>>> dce284823335426640f6a53ac23f87ebf913d277
         </group>
     </open-files>
 </project-private>
