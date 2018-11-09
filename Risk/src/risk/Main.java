@@ -39,9 +39,7 @@ public class Main extends JFrame implements Runnable
         {
             public void mousePressed(MouseEvent e)
             {
-
                 repaint();
-
             }
         });
 
@@ -52,9 +50,8 @@ public class Main extends JFrame implements Runnable
             {
                 if (e.BUTTON1 == e.getButton())
                 {
-
+                    Titlescreen.pressedButton();
                 }
-
                 repaint();
             }
         });
@@ -64,7 +61,6 @@ public class Main extends JFrame implements Runnable
         {
             public void mouseDragged(MouseEvent e)
             {
-                
                 repaint();
             }
         });
