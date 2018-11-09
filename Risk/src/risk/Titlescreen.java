@@ -16,6 +16,7 @@ public class Titlescreen {
     static private boolean onSecondButton;
     static private boolean onThirdButton;
     static private Image menuImage;
+    static private Image emberImage;
     static private sound menuMusic = null;
     
     static void reset(){
@@ -25,6 +26,7 @@ public class Titlescreen {
         onSecondButton=false;
         onThirdButton=false;
         menuImage=Toolkit.getDefaultToolkit().getImage("./TitleScreenGothic.png");
+        emberImage=Toolkit.getDefaultToolkit().getImage("./Floating Embers.gif");
         menuMusic=new sound("titlemusic.wav");
     }
     static void drawMenu(int mousePos [],Main m){
@@ -37,6 +39,7 @@ public class Titlescreen {
     }
     
     static private void drawMain(int x, int y, Main m) {
+        //g.drawImage(emberImage,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,m);
         g.drawImage(menuImage,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,m);
             g.setFont(new Font("Viner Hand ITC", Font.ROMAN_BASELINE, fontSize));
 
