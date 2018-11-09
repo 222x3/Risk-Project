@@ -18,7 +18,7 @@ public class Main extends JFrame implements Runnable
     String host = new String();
     public static boolean isConnecting = false;
     public static boolean isClient;
-    
+
     Thread relaxer;
     int mousePos []= new int[2];
 
