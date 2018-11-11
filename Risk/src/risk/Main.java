@@ -254,7 +254,7 @@ public class Main extends JFrame implements Runnable
         
         
         if(Titlescreen.isActive()){
-            Titlescreen.drawMenu(mousePos, this);
+            Titlescreen.drawMenu(mousePos, this, host);
         }
         
         
