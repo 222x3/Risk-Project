@@ -58,6 +58,7 @@ public class Main extends JFrame implements Runnable
             {
                 if (e.BUTTON1 == e.getButton())
                 {
+                    
                     Titlescreen.pressedButton();
                 }
                 repaint();
@@ -256,6 +257,9 @@ public class Main extends JFrame implements Runnable
         if(Titlescreen.isActive()){
             Titlescreen.drawMenu(mousePos, this, host);
         }
+        else if(!Titlescreen.isActive()) {
+            GameBoard.Draw(g,this);
+        }
         
         
 //        if (!gameStarted)
@@ -327,6 +331,7 @@ public class Main extends JFrame implements Runnable
 
     public static void reset() {
             Titlescreen.reset();
+
     }
 
 
